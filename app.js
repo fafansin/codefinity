@@ -1,3 +1,5 @@
-// Random number
-const randomNumber = Math.floor(Math.random() * 100) + 1;
-console.log(`Random Number: ${randomNumber}`);
+// Multiplier
+const ordererQuantity = 4;
+const pricePerTumbler = 49;
+const message = "You have to pay:";
+console.log(message, ordererQuantity*pricePerTumbler);
