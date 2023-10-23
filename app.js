@@ -1,4 +1,12 @@
-// CLI EXAMPLE
-const args = process.argv.slice(2);
-const sum = args.reduce((total, num) => total + parseFloat(num), 0);
-console.log('SUM:', sum);
+// CLI EXAMPLE using commander
+const { program } = require("commander");
+
+program
+    .version("1.0.0")
+    .command("greet <name>")
+    .description("Greet a person")
+    .action((name) => {
+        console.log(`Hello, ${name}`);
+    })
+
+program.parse(process.argv);
